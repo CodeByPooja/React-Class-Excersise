@@ -11,8 +11,8 @@ function App() {
     console.log("onCreateNewClass called!!");
 
     const classInfo = {
-      id: Data.length + 1,
-      "school-id": Data.length + 1,
+      id: classData.length + 1,
+      "school-id": classData.length + 1,
       students: [],
       status: "ACTIVE",
     };
