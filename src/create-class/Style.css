@@ -1,0 +1,9 @@
+.create-class button {
+    padding: 10px;
+    margin: 10px;
+    background-color: lightblue;
+    /* outline: none; */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

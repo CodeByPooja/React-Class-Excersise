@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { useState } from "react";
+import "./App.css";
+import { ClassList } from "./class-list/ClassList";
+import { CreateClass } from "./create-class/CreateClass";
+import Data from "./data/class-list.json";
+// const fs = require('fs');
 function App() {
+  const [classData, setClassData] = useState(Data);
+
+  const onCreateNewClass = () => {
+    console.log("onCreateNewClass called!!");
+
+    const classInfo = {
+      id: Data.length + 1,
+      "school-id": Data.length + 1,
+      students: [],
+      status: "ACTIVE",
+    };
+    setClassData([classInfo, ...classData]);
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CreateClass createNew={() => onCreateNewClass()} />
+      <ClassList list={classData} />
     </div>
   );
 }

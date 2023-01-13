@@ -1,0 +1,31 @@
+.student-list {
+    list-style: none;
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+}
+
+.student-header {
+    font-weight: 600;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+}
+
+
+
+.student-content {
+    display: flex;
+    padding: 5px 0;
+}
+.student-content:hover {
+    background-color: aliceblue;
+    cursor: pointer;
+}
+
+.student-content .student-first-col {
+    width: 85px;
+}
+.student-content .col-width, .student-header .col-width {
+    min-width: 115px;
+}
